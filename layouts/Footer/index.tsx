@@ -7,6 +7,6 @@ import Link from 'next/link'
 
 const Footer: FC = () => {
   const { classes } = useStyles()
-  return <footer></footer>
+  return <footer>dsafsdf</footer>
 }
 export default Footer
