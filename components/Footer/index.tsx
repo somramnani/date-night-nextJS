@@ -9,7 +9,7 @@ const Footer: FC = () => {
   const { classes } = useStyles()
   return (
     <footer>
-      <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }} bgcolor="text.secondary" color="white">
+      <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }} bgcolor="#263238" color="white">
         <Container maxWidth="lg">
           <Grid container spacing={5}>
             <Grid item md={6} xs={12} sm={4}>
@@ -22,10 +22,10 @@ const Footer: FC = () => {
               </Box>
             </Grid>
           </Grid>
-          <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            Copyright &reg; {new Date().getFullYear()}
-          </Box>
         </Container>
+      </Box>
+      <Box textAlign="center" bgcolor="#434343" pt={{ xs: 5, sm: 5 }} pb={{ xs: 5, sm: 5 }}>
+        Copyright &reg; {new Date().getFullYear()}
       </Box>
     </footer>
   )

@@ -11,7 +11,7 @@ import Button from '@mui/material/Button'
 const Navbar: FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" color="default">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Date Night
