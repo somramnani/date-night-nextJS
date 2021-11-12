@@ -4,6 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useStyles from './styles'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +14,8 @@ const Home: NextPage = () => {
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Navbar />
+      <Footer />
     </div>
   )
 }
