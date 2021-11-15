@@ -5,6 +5,10 @@ import styles from '../styles/Home.module.css'
 import useStyles from './styles'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+// import Container from '@mui/material/Container'
+import { Grid, Container } from '@mui/material'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +19,15 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <section>
+        <Grid container>
+          <Grid item xs>
+            <FontAwesomeIcon icon={faCoffee} />
+            Restaurant Search for popular restaurants in the given location to have a wonderful
+            meal.
+          </Grid>
+        </Grid>
+      </section>
       <Footer />
     </div>
   )
