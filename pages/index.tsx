@@ -19,15 +19,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <section>
-        <Grid container>
-          <Grid item xs>
-            <FontAwesomeIcon icon={faCoffee} />
-            Restaurant Search for popular restaurants in the given location to have a wonderful
-            meal.
-          </Grid>
+
+      <Grid container>
+        <Grid item xs>
+          <FontAwesomeIcon icon={faCoffee} />
+          Restaurant Search for popular restaurants in the given location to have a wonderful meal.
         </Grid>
-      </section>
+      </Grid>
+
       <Footer />
     </div>
   )
