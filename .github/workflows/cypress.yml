@@ -1,5 +1,7 @@
 name: Run Cypress
 
+on: [push]
+
 jobs:
   install:
     runs-on: ubuntu-latest
