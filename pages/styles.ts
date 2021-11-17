@@ -1,7 +1,6 @@
-// import { makeStyles } from '../lib/utils/makeStyles'
+import { makeStyles } from '../lib/utils/makeStyles'
 
-// const useStyles = makeStyles()(() => ({}))
+const useStyles = makeStyles()
+// (() => ({}))
 
-// export default useStyles
-
-export {}
+export default useStyles

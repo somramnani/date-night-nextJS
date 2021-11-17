@@ -8,7 +8,7 @@ module.exports = {
   parserOptions: { ecmaVersion: 8 },
   extends: ['next/core-web-vitals', 'eslint:recommended'],
   ignorePatterns: ['node_modules/*', '.next/*', '.out/*', '!.prettierrc.js', '*.d.ts'],
-  plugins: ['react-hooks', 'lodash', 'cypress', 'sequelize', 'autofix'],
+  plugins: ['react-hooks', 'cypress', 'sequelize', 'autofix'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
