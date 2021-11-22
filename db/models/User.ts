@@ -1,7 +1,10 @@
-import { Optional } from 'sequelize'
-import { Table, Model, Column, DataType } from 'sequelize-typescript'
+import { DataTypes, Optional, Model, Sequelize } from 'sequelize'
+const env = process.env.NODE_ENV || 'development'
+const config = require(__dirname + '/../config/config.js')[env]
 
-interface UserAttributes {
+const sequelize = new Sequelize(config)
+
+export interface UserAttributes {
   id?: number
   name: string
   email: string
@@ -10,14 +13,36 @@ interface UserAttributes {
 
 interface UserCreationAttributes extends Optional<UserAttributes, 'id'> {}
 
-@Table
-export default class User extends Model<UserAttributes, UserCreationAttributes> {
-  @Column(DataType.TEXT)
-  name: string
-
-  @Column(DataType.TEXT)
-  email: string
-
-  @Column(DataType.TEXT)
-  password: string
+export class User extends Model<UserAttributes, UserCreationAttributes> implements UserAttributes {
+  public id!: number
+  public name!: string
+  public email!: string
+  public password!: string
 }
+
+User.init(
+  {
+    id: {
+      type: DataTypes.INTEGER.UNSIGNED,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    name: {
+      type: new DataTypes.STRING(128),
+      allowNull: false,
+    },
+    email: {
+      type: new DataTypes.STRING(128),
+      allowNull: false,
+    },
+    password: {
+      type: new DataTypes.STRING(128),
+      allowNull: false,
+    },
+  },
+  {
+    modelName: 'Users',
+    sequelize,
+    timestamps: true,
+  }
+)

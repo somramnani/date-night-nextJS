@@ -1,7 +1,7 @@
-import { Sequelize } from 'sequelize-typescript'
+import { Sequelize } from 'sequelize'
 const env = process.env.NODE_ENV || 'development'
 const config = require(__dirname + '/../config/config.js')[env]
 
-const db = new Sequelize(config)
+export function initModels 
 
-export { db }
+export default sequelize
