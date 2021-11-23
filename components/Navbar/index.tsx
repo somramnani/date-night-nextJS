@@ -7,19 +7,26 @@ import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/material/Menu'
 import { FC } from 'react'
 import Button from '@mui/material/Button'
+import { signIn, signOut, useSession } from 'next-auth/react'
+import Image from 'next/image'
 
 const Navbar: FC = () => {
+  const { data: session, status } = useSession()
+  const loading = status === 'loading'
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="default">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Date Night
+            Date Night {session ? 'Welcome, ' + session.user?.name : null}
           </Typography>
-          <Button color="inherit">Login</Button>
+          {session ? <Image width="32" height="32" src={session?.user?.image || ''} /> : null}
+          <Button onClick={() => signIn()} component="button">{session ? 'log out' : 'log in'}</Button>
+          <Button onClick={() => signOut()} component="button">sign out</Button>
         </Toolbar>
       </AppBar>
-    </Box>
+    </Box >
   )
 }
 export default Navbar
