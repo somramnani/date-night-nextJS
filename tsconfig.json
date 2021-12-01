@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "checkJs": false,
+    "types": ["cypress", "node"],
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -12,11 +14,17 @@
     "emitDecoratorMetadata": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "strictPropertyInitialization": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "db/config/config.js", "db/models/index.js"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
