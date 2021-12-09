@@ -1,16 +1,13 @@
 import { makeStyles } from '../lib/utils/makeStyles'
 
 const useStyles = makeStyles()(() => ({
-  homepageBackgroundPhoto: {
-    background-image: url("/fireworks"),
-    background-repeat: no-repeat,
-    background-size: cover,
-    height: 100vh,
-    background-attachment: fixed,
-    opacity: 1,
-    width: 100%,
-    background-position: center center,
-
+  materialIcons: {
+    paddingTop: 20,
+    paddingBottom: 0,
+    fontSize: 100,
+  },
+  description: {
+    paddingBottom: 10,
   },
 }))
 
