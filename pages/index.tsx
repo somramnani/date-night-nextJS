@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Divider from '@mui/material/Divider'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import useStyles from './styles'
