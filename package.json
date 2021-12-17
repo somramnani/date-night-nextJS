@@ -14,14 +14,13 @@
     "@mui/icons-material": "^5.1.0",
     "@mui/material": "^5.1.0",
     "@mui/styles": "^5.1.0",
+    "@prisma/client": "3.6.0",
+    "mysql2": "^2.3.3",
     "next": "12.0.0",
-    "pg": "^8.7.1",
-    "pg-hstore": "^2.3.4",
+    "prisma": "3.6.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "reflect-metadata": "^0.1.13",
-    "sequelize": "^6.9.0",
-    "sequelize-typescript": "^2.1.1",
     "tss-react": "^2.0.3"
   },
   "devDependencies": {
@@ -31,7 +30,6 @@
     "eslint": "7",
     "eslint-config-next": "12.0.0",
     "prettier": "2.4.1",
-    "sequelize-cli": "^6.3.0",
     "typescript": "4.4.4"
   }
 }
