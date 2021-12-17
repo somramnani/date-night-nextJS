@@ -9,6 +9,7 @@ import { styled } from '@mui/material/styles'
 import Navbar from '../components/Navbar'
 import { Grid, Container } from '@mui/material'
 import Paper from '@mui/material/Paper'
+import Searchbar from '../components/Searchbar'
 import RestaurantIcon from '@mui/icons-material/Restaurant'
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -28,6 +29,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <Searchbar />
       <Container>
         <Grid container spacing={5} style={{ textAlign: 'center' }}>
           <Grid item sm className={classes.description}>

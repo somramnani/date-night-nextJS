@@ -4,7 +4,7 @@ const useStyles = makeStyles()(() => ({
   materialIcons: {
     paddingTop: 20,
     paddingBottom: 0,
-    fontSize: 100,
+    fontSize: 75,
   },
   description: {
     paddingBottom: 10,
