@@ -18,8 +18,22 @@ model Profile {
 }
 
 model User {
-  id      Int      @id @default(autoincrement())
-  email   String   @unique
-  name    String?
-  profile Profile?
+  id        Int         @id @default(autoincrement())
+  email     String      @unique
+  name      String?
+  profile   Profile?
+  Itinerary Itinerary[]
+}
+
+model Date {
+  id          Int        @id @default(autoincrement())
+  Itinerary   Itinerary? @relation(fields: [itineraryId], references: [id])
+  itineraryId Int?
+}
+
+model Itinerary {
+  id     Int    @id @default(autoincrement())
+  user   User   @relation(fields: [userId], references: [id])
+  date   Date[]
+  userId Int
 }
