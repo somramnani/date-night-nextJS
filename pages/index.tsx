@@ -11,6 +11,7 @@ import { Grid, Container } from '@mui/material'
 import Paper from '@mui/material/Paper'
 import Searchbar from '../components/Searchbar'
 import RestaurantIcon from '@mui/icons-material/Restaurant'
+import Divider from '@mui/material/Divider'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -37,8 +38,7 @@ const Home: NextPage = () => {
             <h2>Restaurants</h2>
             <Item>
               {' '}
-              Restaurant Search for popular restaurants in the given location to have a wonderful
-              meal.
+              Search for popular restaurants in the given location to have a wonderful meal.
             </Item>
           </Grid>
           <Grid item sm className={classes.description}>
@@ -52,7 +52,6 @@ const Home: NextPage = () => {
           </Grid>
         </Grid>
       </Container>
-
       <Footer />
     </div>
   )

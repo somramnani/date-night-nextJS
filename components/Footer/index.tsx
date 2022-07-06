@@ -8,7 +8,7 @@ import Link from 'next/link'
 const Footer: FC = () => {
   const { classes } = useStyles()
   return (
-    <footer>
+    <footer className={classes.footer}>
       <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }} bgcolor="#263238" color="white">
         <Container maxWidth="lg">
           <Grid container spacing={5}>
